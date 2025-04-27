@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>IniParser</RootNamespace>
+    <AssemblyName>IniParser</AssemblyName>
+    <Description>A .NET 8 library for reading/writing INI data from IO streams, file streams, and strings written in C#.
+Also implements merging operations, both for complete ini files, sections, or even just a subset of the keys contained by the files.
+(*) This library is 100% .NET code and does not have any dependencies on Windows API calls in order to be portable.</Description>
+    <Authors>Original - Ricardo Amores Hernández, Updated Mark Alicz</Authors>
+    <PackageProjectUrl>https://github.com/IVolt-APPS/IniParser_Net8</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>    
+    <Version>4.0</Version>
+    <SignAssembly>False</SignAssembly>    
+    <OutputType>Library</OutputType>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <NoWarn>$(NoWarn);0618;1591;1573</NoWarn>
+    <!-- Ignore: Use of Deprecated, Undocumented Public Members, Undocumented Parameters -->
+    <PackageTags>ini, parser, configuration, config, inifile, cfg, ini file</PackageTags>
+    <PackageId>Ini-parser</PackageId>
+    <Product>Ini Parser</Product>
+    <ReleaseVersion>
+    </ReleaseVersion>
+  </PropertyGroup>
+  <!-- Auto-select supported target frameworks based on MSBuild version -->
+  <PropertyGroup>
+    <TargetFrameworks>net8.0</TargetFrameworks>
+    <RepositoryUrl>https://github.com/IVolt-APPS/IniParser_Net8</RepositoryUrl>
+    <Copyright>Ricardo Amores Hernández 2009-2019</Copyright>
+    <Nullable>disable</Nullable>
+    <ApplicationIcon>iniParser_Net8.ico</ApplicationIcon>
+  </PropertyGroup>
+  <!-- Only generate NuGet package for full builds -->
+  <PropertyGroup Condition="'$(MSBuildRuntimeType)'=='Full'">
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="iniParser_Net8.ico" />
+  </ItemGroup>
+</Project>
